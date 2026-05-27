@@ -24,7 +24,7 @@ public final class WebhookPublisher: @unchecked Sendable {
         request.setValue("kakaocli/0.3.0", forHTTPHeaderField: "User-Agent")
         request.httpBody = body
 
-        nonisolated(unsafe) var success = false
+        var success = false
         let semaphore = DispatchSemaphore(value: 0)
         let task = session.dataTask(with: request) { _, response, error in
             if error == nil, let http = response as? HTTPURLResponse, (200..<300).contains(http.statusCode) {

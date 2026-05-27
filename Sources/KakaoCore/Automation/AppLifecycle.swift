@@ -153,7 +153,7 @@ public enum AppLifecycle {
         config.activates = true
 
         let semaphore = DispatchSemaphore(value: 0)
-        nonisolated(unsafe) var launchError: (any Error)?
+        var launchError: Error?
 
         NSWorkspace.shared.openApplication(at: appURL, configuration: config) { _, error in
             launchError = error

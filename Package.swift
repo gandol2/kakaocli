@@ -1,10 +1,10 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.7
 
 import PackageDescription
 
 let package = Package(
     name: "kakaocli",
-    platforms: [.macOS(.v14)],
+    platforms: [.macOS(.v12)],
     products: [
         .executable(name: "kakaocli", targets: ["KakaoCLI"]),
         .library(name: "KakaoCore", targets: ["KakaoCore"]),
