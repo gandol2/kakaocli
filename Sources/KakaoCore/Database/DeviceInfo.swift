@@ -260,7 +260,7 @@ public enum DeviceInfo {
                 }
                 if i & 0x1FFFF == 0 {
                     if state.shouldStop { return }
-                    if CFAbsoluteTimeGetCurrent() - startTime > 60 {
+                    if CFAbsoluteTimeGetCurrent() - startTime > 600 {
                         state.requestStop()
                         return
                     }
